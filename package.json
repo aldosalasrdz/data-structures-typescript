@@ -10,12 +10,7 @@
   "author": "Aldo Salas <aldosalasrdz@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "standard": "^17.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
-    "vitest": "^0.31.0"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "typescript": "^5.0.4"
   }
 }
