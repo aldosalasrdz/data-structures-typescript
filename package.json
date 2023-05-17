@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "Aldo Salas <aldosalasrdz@gmail.com>",
