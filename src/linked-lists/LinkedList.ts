@@ -86,6 +86,27 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
     return false;
   }
 
+  deleteAtTail() {
+    if (this.head === null) {
+      return;
+    }
+
+    let current = this.head;
+
+    if (current.next === null) {
+      this.deleteAtHead();
+      return;
+    }
+
+    while (current.next !== null) {
+      if (current.next.next === null) {
+        current.next = null;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
   printList(): void {
     if (this.isEmpty()) {
       console.log("Empty list");

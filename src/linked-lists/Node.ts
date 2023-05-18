@@ -1,4 +1,4 @@
 export class Node<T> {
-	public next: Node<T> | null = null;
-	constructor(public data: T) {}
+  public next: Node<T> | null = null;
+  constructor(public data: T) { }
 }
