@@ -32,12 +32,6 @@ console.log(list.search(45));
 list.deleteAtHead();
 list.printList();
 
-console.log(list.delete(45));
-console.log(list.delete(100));
-
-list.printList();
-
-list.deleteAtTail()
-list.deleteAtTail()
+list.reverse();
 
 list.printList();

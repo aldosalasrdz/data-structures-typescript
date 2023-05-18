@@ -107,6 +107,21 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
     }
   }
 
+  reverse() {
+    let previousNode = null;
+    let currentNode = this.head;
+    let nextNode = null;
+
+    while (currentNode !== null) {
+      nextNode = currentNode.next;
+      currentNode.next = previousNode;
+      previousNode = currentNode;
+      currentNode = nextNode;
+    }
+
+    this.head = previousNode;
+  }
+
   printList(): void {
     if (this.isEmpty()) {
       console.log("Empty list");
