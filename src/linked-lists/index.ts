@@ -30,8 +30,7 @@ console.log(list.search(5));
 console.log(list.search(45));
 
 list.deleteAtHead();
-list.printList();
-
-list.reverse();
+list.deleteAtHead();
+list.deleteAtHead();
 
 list.printList();

@@ -10,7 +10,7 @@ interface LinkedList<T> {
 }
 
 export class SinglyLinkedList<T> implements LinkedList<T> {
-  private head: Node<T> | null = null;
+  public head: Node<T> | null = null;
 
   isEmpty(): boolean {
     return this.head === null;
@@ -86,7 +86,7 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
     return false;
   }
 
-  deleteAtTail() {
+  deleteAtTail(): void {
     if (this.head === null) {
       return;
     }
@@ -105,21 +105,6 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
       }
       current = current.next;
     }
-  }
-
-  reverse() {
-    let previousNode = null;
-    let currentNode = this.head;
-    let nextNode = null;
-
-    while (currentNode !== null) {
-      nextNode = currentNode.next;
-      currentNode.next = previousNode;
-      previousNode = currentNode;
-      currentNode = nextNode;
-    }
-
-    this.head = previousNode;
   }
 
   printList(): void {
