@@ -10,11 +10,7 @@ import { SinglyLinkedList } from "../../LinkedList";
     return slowNode;
   }
 
-  while (
-    slowNode?.next !== null &&
-    fastNode?.next !== null &&
-    fastNode?.next.next !== null
-  ) {
+  while (slowNode && fastNode.next && fastNode.next.next) {
     slowNode = slowNode.next;
     fastNode = fastNode.next.next;
   }
@@ -35,7 +31,7 @@ function findMid<T>(list: SinglyLinkedList<T>) {
     length++;
   }
 
-  const middle = Math.ceil(length / 1);
+  const middle = Math.ceil(length / 2);
 
   let midNode = list.head;
 
@@ -54,5 +50,6 @@ myList.insertAtTail(7);
 myList.insertAtTail(14);
 myList.insertAtTail(10);
 myList.insertAtTail(21);
+myList.insertAtTail(34);
 
 console.log(findMid(myList));
