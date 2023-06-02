@@ -17,25 +17,25 @@ findMaxSumSubArray([-2, 10, 7, -5, 15, 6]);
 findMaxSumSubArray([1, 10, -1, 11, 5, -30, -7, 20, 25, -35]); */
 
 const findMaxSumSubArray = function (array_: number[]) {
-	if (array_.length < 1) {
-		return 0;
-	}
+  if (array_.length < 1) {
+    return 0;
+  }
 
-	let currMax = array_[0];
-	let globalMax = array_[0];
-	const lengtharray = array_.length;
-	for (let i = 1; i < lengtharray; i++) {
-		if (currMax < 0) {
-			currMax = array_[i];
-		} else {
-			currMax += array_[i];
-		}
+  let currMax = array_[0];
+  let globalMax = array_[0];
+  const lengtharray = array_.length;
+  for (let i = 1; i < lengtharray; i++) {
+    if (currMax < 0) {
+      currMax = array_[i];
+    } else {
+      currMax += array_[i];
+    }
 
-		if (globalMax < currMax) {
-			globalMax = currMax;
-		}
-	}
-	return globalMax;
+    if (globalMax < currMax) {
+      globalMax = currMax;
+    }
+  }
+  return globalMax;
 };
 
 const v = [-4, -6, -5, 1, 2, 3, 6, -5, 1];
