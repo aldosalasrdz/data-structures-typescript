@@ -16,19 +16,19 @@ findMaxSumSubArray([-2, 10, 7, -5, 15, 6]);
 // findMaxSumSubArray([1, 2, 20, -9, 4, 5]);
 findMaxSumSubArray([1, 10, -1, 11, 5, -30, -7, 20, 25, -35]); */
 
-const findMaxSumSubArray = function (array_: number[]) {
-  if (array_.length < 1) {
+const findMaxSumSubArray = function (array: number[]) {
+  if (array.length < 1) {
     return 0;
   }
 
-  let currMax = array_[0];
-  let globalMax = array_[0];
-  const lengtharray = array_.length;
+  let currMax = array[0];
+  let globalMax = array[0];
+  const lengtharray = array.length;
   for (let i = 1; i < lengtharray; i++) {
     if (currMax < 0) {
-      currMax = array_[i];
+      currMax = array[i];
     } else {
-      currMax += array_[i];
+      currMax += array[i];
     }
 
     if (globalMax < currMax) {
