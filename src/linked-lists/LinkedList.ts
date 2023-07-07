@@ -1,12 +1,12 @@
 import { Node } from "./Node";
 
 interface LinkedList<T> {
-  insertAtTail(data: T): Node<T>;
-  insertAtHead(data: T): Node<T>;
-  delete(data: T): boolean;
-  deleteAtHead(): void;
-  search(data: T): boolean;
-  isEmpty(): boolean;
+  insertAtTail: (data: T) => Node<T>;
+  insertAtHead: (data: T) => Node<T>;
+  delete: (data: T) => boolean;
+  deleteAtHead: () => void;
+  search: (data: T) => boolean;
+  isEmpty: () => boolean;
 }
 
 export class SinglyLinkedList<T> implements LinkedList<T> {
@@ -112,7 +112,7 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
       console.log("Empty list");
     } else {
       let current = this.head;
-      while (current) {
+      while (current !== null) {
         process.stdout.write(String(current.data));
         process.stdout.write(" -> ");
         current = current.next;
