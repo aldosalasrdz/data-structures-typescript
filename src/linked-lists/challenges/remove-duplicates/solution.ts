@@ -5,17 +5,17 @@ function removeDuplicates<T>(list: SinglyLinkedList<T>) {
   let current = list.head;
   let previous = null;
 
-  const map = new Map<T, boolean>();
+  const visited = new Map<T, boolean>();
 
   while (current !== null) {
-    if (map.has(current.data)) {
+    if (visited.has(current.data)) {
       if (previous !== null) {
         previous.next = current.next;
       } else {
         list.head = current.next;
       }
     } else {
-      map.set(current.data, true);
+      visited.set(current.data, true);
       previous = current;
     }
     current = current.next;
