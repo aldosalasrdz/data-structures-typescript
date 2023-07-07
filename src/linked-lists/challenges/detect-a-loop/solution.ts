@@ -1,18 +1,22 @@
 import { SinglyLinkedList } from "../../LinkedList";
 
 function detectLoop<T>(list: SinglyLinkedList<T>) {
-  let slow = list.head;
-  let fast = list.head;
+  let slowerNode = list.head;
+  let fasterNode = list.head;
 
   if (list.head === null) {
     return false;
   }
 
-  while (slow !== null && fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
+  while (
+    slowerNode !== null &&
+    fasterNode !== null &&
+    fasterNode.next !== null
+  ) {
+    slowerNode = slowerNode.next;
+    fasterNode = fasterNode.next.next;
 
-    if (slow === fast) {
+    if (slowerNode === fasterNode) {
       return true;
     }
   }
@@ -33,10 +37,9 @@ const head = list.head;
 let node = list.head;
 
 for (let i = 0; i < 4; i++) {
-  if (node === null) break;
-  if (head === null) break;
+  if (node === null || head === null) break;
   if (node.next === null) {
-    node.next = head.next;
+    node.next = head;
     break;
   }
   node = node.next;
