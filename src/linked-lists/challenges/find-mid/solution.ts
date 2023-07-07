@@ -1,21 +1,25 @@
 import { SinglyLinkedList } from "../../LinkedList";
 
 function findMid<T>(list: SinglyLinkedList<T>) {
-  let slowNode = list.head;
-  let fastNode = list.head;
+  let slowerNode = list.head;
+  let fasterNode = list.head;
 
-  if (slowNode === null || fastNode === null) return "Empty list";
+  if (slowerNode === null || fasterNode === null) return "Empty list";
 
-  if (slowNode.next === null) {
-    return slowNode;
+  if (slowerNode.next === null) {
+    return slowerNode;
   }
 
-  while (slowNode && fastNode.next && fastNode.next.next) {
-    slowNode = slowNode.next;
-    fastNode = fastNode.next.next;
+  while (
+    slowerNode != null &&
+    fasterNode.next != null &&
+    fasterNode.next.next != null
+  ) {
+    slowerNode = slowerNode.next;
+    fasterNode = fasterNode.next.next;
   }
 
-  return slowNode;
+  return slowerNode;
 }
 
 const myList = new SinglyLinkedList<number>();
