@@ -9,7 +9,7 @@ export class DoublyLinkedList<T> {
   insertTail(item: T) {
     const newNode = new Node(item);
 
-    if (this.length === 0) {
+    if (this.length === 0 || this.tail === null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
@@ -27,7 +27,7 @@ export class DoublyLinkedList<T> {
 
   // Remove node from the beginning of the list
   removeHead() {
-    if (this.length === 0) {
+    if (this.length === 0 || this.head === null) {
       return null;
     }
 
@@ -39,7 +39,10 @@ export class DoublyLinkedList<T> {
     } else {
       this.head = nodeToRemove.next;
 
-      this.head.prev = null;
+      if (this.head !== null) {
+        this.head.prev = null;
+      }
+
       nodeToRemove.next = null;
     }
 
