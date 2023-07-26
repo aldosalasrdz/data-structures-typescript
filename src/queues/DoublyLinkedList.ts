@@ -6,8 +6,8 @@ export class DoublyLinkedList<T> {
   public tail: Node<T> | null = null;
 
   // Add node to the end of the list
-  insertTail(item: T) {
-    const newNode = new Node(item);
+  insertTail(data: T) {
+    const newNode = new Node(data);
 
     if (this.length === 0 || this.tail === null) {
       this.head = newNode;
@@ -48,12 +48,12 @@ export class DoublyLinkedList<T> {
 
     this.length--;
 
-    return nodeToRemove.item;
+    return nodeToRemove.data;
   }
 
   firstNode() {
     if (!(this.head == null)) {
-      return this.head.item;
+      return this.head.data;
     } else return null;
   }
 
@@ -63,7 +63,7 @@ export class DoublyLinkedList<T> {
     let currentNode = this.head;
 
     while (currentNode !== null) {
-      list.push(JSON.stringify(currentNode.item));
+      list.push(JSON.stringify(currentNode.data));
       currentNode = currentNode.next;
     }
 
