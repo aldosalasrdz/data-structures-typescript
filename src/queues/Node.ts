@@ -2,7 +2,5 @@ export class Node<T> {
   public prev: Node<T> | null = null;
   public next: Node<T> | null = null;
 
-  constructor(public item: T) {
-    this.item = item;
-  }
+  constructor(public data: T) {}
 }
