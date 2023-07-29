@@ -4,7 +4,7 @@ function findBin(num: number) {
   const queue = new Queue<number>();
 
   for (let i = 1; i <= num; i++) {
-    const binaryNumber = Number((i >>> 0).toString(2));
+    const binaryNumber = Number(i.toString(2));
     queue.enqueue(binaryNumber);
   }
 
