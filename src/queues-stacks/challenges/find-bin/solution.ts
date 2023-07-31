@@ -1,4 +1,4 @@
-import { Queue } from "../../Queue";
+import { Queue } from "../../queues/Queue";
 
 function findBin(num: number) {
   const queue = new Queue<number>();
