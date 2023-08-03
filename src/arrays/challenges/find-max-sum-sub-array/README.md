@@ -26,6 +26,9 @@ largest_sum = 12
 
 ## Solution
 
+<details>
+<summary>View solution</summary>
+  
 ```ts
 // Time complexity: O(n)
 function findMaxSumSubArray(array: number[]) {
@@ -50,3 +53,5 @@ function findMaxSumSubArray(array: number[]) {
   return globalMax;
 };
 ```
+
+</details>

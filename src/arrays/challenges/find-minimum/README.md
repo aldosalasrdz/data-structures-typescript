@@ -26,6 +26,9 @@ arr = [9, 2, 3, 6]
 
 ## Solution
 
+<details>
+<summary>View solution</summary>
+  
 ```ts
 // Time complexity: O(n)
 function findMinimum(arr: number[]): number {
@@ -40,3 +43,5 @@ function findMinimum(arr: number[]): number {
   return min;
 }
 ```
+
+</details>

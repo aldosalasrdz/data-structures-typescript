@@ -28,6 +28,9 @@ A sorted array with negative elements at the left and positive elements at the r
 
 ## Solution
 
+<details>
+<summary>View solution</summary>
+  
 ```ts
 // Time complexity: O(n)
 function reArrange(arr: number[]): number[] {
@@ -47,3 +50,5 @@ function reArrange(arr: number[]): number[] {
   return arr;
 }
 ```
+
+</details>

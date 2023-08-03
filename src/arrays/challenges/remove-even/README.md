@@ -26,9 +26,14 @@ An array with only even integers.
 
 ## Solution
 
+<details>
+<summary>View solution</summary>
+
 ```ts
 // Time complexity: O(n)
 function removeEven(arr: number[]): number[] {
   return arr.filter((num) => num % 2 !== 0);
 }
 ```
+
+</details>
