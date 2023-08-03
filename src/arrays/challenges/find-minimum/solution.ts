@@ -1,4 +1,4 @@
-export function findMinimum(arr: number[]): number {
+function findMinimum(arr: number[]): number {
   let min = arr[0];
 
   for (const i of arr) {
