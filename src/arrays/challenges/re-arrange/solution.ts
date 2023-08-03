@@ -14,5 +14,3 @@ function reArrange(arr: number[]): number[] {
 
   return arr;
 }
-
-console.log(reArrange([10, -1, 20, 4, 5, -9, -6]));
