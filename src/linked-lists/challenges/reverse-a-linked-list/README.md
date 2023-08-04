@@ -26,6 +26,9 @@ LinkedList = 4 -> 3 -> 2 -> 1 -> 0
 
 ## Solution
 
+<details>
+<summary>View solution</summary>
+
 ```ts
 // Time complexity: O(n)
 function reverse<T>(list: SinglyLinkedList<T>) {
@@ -43,3 +46,5 @@ function reverse<T>(list: SinglyLinkedList<T>) {
   list.head = previousNode;
 }
 ```
+
+</details>
