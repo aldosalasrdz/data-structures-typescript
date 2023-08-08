@@ -20,10 +20,10 @@ export class Queue<T> {
   }
 
   enqueue(data: T) {
-    this.items.insertTail(data);
+    return this.items.insertTail(data);
   }
 
   dequeue() {
-    this.items.removeHead();
+    return this.items.removeHead();
   }
 }
