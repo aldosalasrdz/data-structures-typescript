@@ -2,9 +2,12 @@ class TwoStacks {
   // `s` is the maximum size that the array can have.
   public arr: number[] = [];
   public top1 = -1;
-  public top2 = this.s;
-  public size = this.s;
-  constructor(public s: number) {}
+  public top2: number;
+  public size: number;
+  constructor(public s: number) {
+    this.top2 = this.s;
+    this.size = this.s;
+  }
 
   push1(value: number) {
     if (this.top1 < this.top2 - 1) {
