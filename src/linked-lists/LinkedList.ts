@@ -113,7 +113,8 @@ export class SinglyLinkedList<T> implements LinkedList<T> {
     } else {
       let current = this.head;
       while (current !== null) {
-        process.stdout.write(`${current.data} -> `);
+        process.stdout.write(String(current.data));
+        process.stdout.write(" -> ");
         current = current.next;
       }
       console.log("null");
