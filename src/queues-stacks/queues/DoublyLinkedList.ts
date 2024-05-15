@@ -38,7 +38,6 @@ export class DoublyLinkedList<T> {
       this.tail = null;
     } else {
       this.head = nodeToRemove.next;
-
       if (this.head !== null) {
         this.head.prev = null;
       }
@@ -54,7 +53,7 @@ export class DoublyLinkedList<T> {
   firstNode() {
     if (!(this.head == null)) {
       return this.head.data;
-    } else return null;
+    }
   }
 
   // Return list items
